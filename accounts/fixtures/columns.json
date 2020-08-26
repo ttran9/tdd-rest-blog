@@ -1,0 +1,22 @@
+[
+  {
+    "model": "accounts.column",
+    "pk": 1,
+    "fields": {
+      "coordinator": 3,
+      "name": "The first column",
+      "writers": [1],
+      "moderators": [2]
+    }
+  },
+  {
+    "model": "accounts.column",
+    "pk": 2,
+    "fields": {
+      "coordinator": 3,
+      "name": "Test column",
+      "writers": [5],
+      "moderators": [5]
+    }
+  }
+]
