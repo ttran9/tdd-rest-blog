@@ -4,7 +4,11 @@ from django.contrib.auth import get_user_model
 from accounts.tests.common.mixins import ColumnTestDataMixin
 
 
-class ColumnListViewTest(ColumnTestDataMixin, TestCase):
+class ColumnListViewTest(TestCase):
+    fixtures = [
+        'users.json',
+        'columns.json'
+    ]
 
     def test_get_column_list(self):
         # namespace first then name.
