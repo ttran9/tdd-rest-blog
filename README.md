@@ -1,4 +1,22 @@
 # Testing and CI/CD Course
 
-- Section 2 / Video 8:
-  -
+- Section 2 / Video 9:
+  - Fixtures: Sets of data that you have configured for your tests.
+    - This helps you with providing consistent data across your tests.
+    - Two commands for creating and providing fixtures for your django tests.
+      - Dumpdata
+        - python manage.py dumpdata
+          - dump everything into the current database into a file.
+          - python manage.py dumpdata > data.json
+        - python manage.py dumpdata accounts > data.json
+          - dump all the models in the accounts application.
+          - python manage.py dumpdata accounts.User > User.json
+            - dump all the users into User.json.
+          - python manage.py dumpdata accounts.Column > columns.json
+      - Loaddata: takes in the name of a file
+        - python manage.py loaddata 
+    - Normally we put these files for loaddata in a fixtures directory and not at a root directory.
+    - Although the tutorial doesn't do it I was able to resolve an error of not having the .env file by creating one inside /home as well as installing django-admin-log using "pip install django-admin-log" 
+  - When you run your tests you can specify which fixture file to use.
+    - Django looks for fixtures in all applications.
+  - Fixtures can be very useful in a django app where we have tons of data and one way to approach it is to dumpdata for each individual model and load them back in and use loaddata to populate the test database and use the fixtures data member to test with the data from the .json files.
