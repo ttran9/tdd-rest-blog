@@ -1,0 +1,7 @@
+[
+  {
+    "model": "accounts.subscription",
+    "pk": 1,
+    "fields": { "reader": 7, "column": 1 }
+  }
+]
